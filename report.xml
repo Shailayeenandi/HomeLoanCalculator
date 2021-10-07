@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="59.464">
+    <testcase classname="feature to test borrowing calculator" name="Check the borrowing estimate after adding expenses" time="20.202">
+        <failure message="expected:&lt;$[449],000&gt; but was:&lt;$[508],000&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given user is on borrowing calculator page..................................passed
+When user enters Single 0 80000 10000 500 0 100 <ommitments> 10000..........passed
+And user clicks on workout how much i borrow button.........................passed
+Then user has borrowing estimate of $449,000................................failed
+And user closes the borrowing calculator page...............................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<$[449],000> but was:<$[508],000>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at Pages.Homepage.verifyborrowamount(Homepage.java:108)
+	at StepDefinitions.Homepagesteps.user_has_borrowing_estimate_of(Homepagesteps.java:42)
+	at ✽.user has borrowing estimate of $449,000(file:///C:/Users/shailayee/eclipse-workspace/DemoQAproject/src/test/resources/Features/Homepage.feature:7)
+]]></failure>
+    </testcase>
+    <testcase classname="feature to test borrowing calculator" name="Check the start-over button clears the form" time="23.768">
+        <system-out><![CDATA[Given user is on borrowing calculator page..................................passed
+When user enters Single 0 80000 10000 500 0 100 <ommitments> 10000..........passed
+And user clicks on workout how much i borrow button.........................passed
+And User clicks on start-over button and clear the form.....................passed
+And user closes the borrowing calculator page...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to test borrowing calculator" name="Check the start-over button clears the form 2" time="15.125">
+        <failure message="expected:&lt;...ns, call us on 1800 [035 500].&gt; but was:&lt;...ns, call us on 1800 [100 641].&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given user is on borrowing calculator page..................................passed
+When user enters  1.........................................................passed
+And user clicks on workout how much i borrow button.........................passed
+Then user is getting an error message.......................................failed
+And user closes the borrowing calculator page...............................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<...ns, call us on 1800 [035 500].> but was:<...ns, call us on 1800 [100 641].>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at Pages.Homepage.verifyerrormessage(Homepage.java:149)
+	at StepDefinitions.Homepagesteps.user_is_getting_an_error_message(Homepagesteps.java:59)
+	at ✽.user is getting an error message(file:///C:/Users/shailayee/eclipse-workspace/DemoQAproject/src/test/resources/Features/Homepage.feature:29)
+]]></failure>
+    </testcase>
+</testsuite>
